@@ -1,0 +1,22 @@
+{
+    "name": "martindilling/daytime",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Dilling-Hansen",
+            "email": "martindilling@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "4.2.*",
+        "martindilling/sunny": "0.*",
+        "codingbean/macaw": "dev-master",
+        "twig/twig": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Daytime\\": "app/Daytime"
+        }
+    },
+    "minimum-stability": "dev"
+}

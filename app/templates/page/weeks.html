@@ -1,0 +1,52 @@
+{% extends "layouts/master.html" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-1">
+                {% include 'partials/nav-weeks.html' %}
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-11">
+                <main role="main">
+                    {% for week in weekData %}
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Week: {{ week.week }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for day in week.days %}
+                                    <tr>
+                                        <td width="150" class="cell-info">
+                                            <div class="weekday">
+                                                {{ day.weekday }}
+                                                <span class="small-date text-muted pull-right">{{ day.date }}</span>
+                                            </div>
+                                        </td>
+                                        <td width="40" class="cell-info">
+                                            <span class="small-date text-muted pull-right">{% if day.dst %}DST{% endif %}</span>
+                                        </td>
+                                        <td class="cell-timeline">
+                                            <div class="progress sun-cycle">
+                                                <div class="progress-bar sun-cycle-sunrise" style="width: {{ day.sunrise.pct }}%">
+                                                    <span class="glyphicon glyphicon-arrow-up"></span> {{ day.sunrise.string }}
+                                                </div>
+                                                <div class="progress-bar sun-cycle-day" style="width: {{ day.sunny.pct }}%">
+                                                    {{ day.sunny.string }} hours
+                                                </div>
+                                                <div class="progress-bar sun-cycle-sunset" style="width: {{ day.sunset.pct }}%">
+                                                    {{ day.sunset.string }} <span class="glyphicon glyphicon-arrow-down"></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% endfor %}
+                </main>
+            </div>
+        </div>
+{% endblock %}

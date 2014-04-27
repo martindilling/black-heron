@@ -1,0 +1,82 @@
+/* Header */
+.header-top {
+    background: url('../img/steve-garvie__black-heron.jpg') no-repeat center -140px fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.header-top h1 {
+    color: #eeeeee;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+/* Navigation */
+.week-nav a {
+    padding: 0px 15px;
+    text-align: center;
+}
+
+/* Week tables */
+.weekday {
+    font-size: 12px;
+    font-weight: bold;
+}
+.small-date {
+    font-size: 10px;
+}
+.cell-info {
+    padding: 0 4px !important;
+}
+.cell-timeline {
+    padding: 0 !important;
+}
+.sun-cycle {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.sun-cycle-sunrise,
+.sun-cycle-sunset {
+    background-color: #0b606e;
+    font-size: 11px;
+    color: #42cbea;
+}
+.sun-cycle-sunrise {
+    padding-right: 5px;
+    text-align: right;
+    background: rgb(0,7,17);
+    background: -moz-linear-gradient(left,  rgba(0,7,17,1) 0%, rgba(0,21,43,1) 59%, rgba(31,54,86,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,7,17,1)), color-stop(59%,rgba(0,21,43,1)), color-stop(100%,rgba(31,54,86,1)));
+    background: -webkit-linear-gradient(left,  rgba(0,7,17,1) 0%,rgba(0,21,43,1) 59%,rgba(31,54,86,1) 100%);
+    background: -o-linear-gradient(left,  rgba(0,7,17,1) 0%,rgba(0,21,43,1) 59%,rgba(31,54,86,1) 100%);
+    background: -ms-linear-gradient(left,  rgba(0,7,17,1) 0%,rgba(0,21,43,1) 59%,rgba(31,54,86,1) 100%);
+    background: linear-gradient(to right,  rgba(0,7,17,1) 0%,rgba(0,21,43,1) 59%,rgba(31,54,86,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000711', endColorstr='#1f3656',GradientType=1 );
+}
+.sun-cycle-sunset {
+    padding-left: 5px;
+    text-align: left;
+    background: rgb(31,54,86);
+    background: -moz-linear-gradient(left,  rgba(31,54,86,1) 0%, rgba(0,21,43,1) 41%, rgba(0,7,17,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(31,54,86,1)), color-stop(41%,rgba(0,21,43,1)), color-stop(100%,rgba(0,7,17,1)));
+    background: -webkit-linear-gradient(left,  rgba(31,54,86,1) 0%,rgba(0,21,43,1) 41%,rgba(0,7,17,1) 100%);
+    background: -o-linear-gradient(left,  rgba(31,54,86,1) 0%,rgba(0,21,43,1) 41%,rgba(0,7,17,1) 100%);
+    background: -ms-linear-gradient(left,  rgba(31,54,86,1) 0%,rgba(0,21,43,1) 41%,rgba(0,7,17,1) 100%);
+    background: linear-gradient(to right,  rgba(31,54,86,1) 0%,rgba(0,21,43,1) 41%,rgba(0,7,17,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f3656', endColorstr='#000711',GradientType=1 );
+}
+.sun-cycle-day {
+    background-color: #42cbea;
+    font-size: 11px;
+    color: #0b606e;
+    background: rgb(0,71,130);
+    background: -moz-linear-gradient(left,  rgba(0,71,130,1) 0%, rgba(5,122,181,1) 3%, rgba(5,171,224,1) 10%, rgba(135,224,253,1) 50%, rgba(5,171,224,1) 90%, rgba(5,122,181,1) 97%, rgba(0,71,130,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,71,130,1)), color-stop(3%,rgba(5,122,181,1)), color-stop(10%,rgba(5,171,224,1)), color-stop(50%,rgba(135,224,253,1)), color-stop(90%,rgba(5,171,224,1)), color-stop(97%,rgba(5,122,181,1)), color-stop(100%,rgba(0,71,130,1)));
+    background: -webkit-linear-gradient(left,  rgba(0,71,130,1) 0%,rgba(5,122,181,1) 3%,rgba(5,171,224,1) 10%,rgba(135,224,253,1) 50%,rgba(5,171,224,1) 90%,rgba(5,122,181,1) 97%,rgba(0,71,130,1) 100%);
+    background: -o-linear-gradient(left,  rgba(0,71,130,1) 0%,rgba(5,122,181,1) 3%,rgba(5,171,224,1) 10%,rgba(135,224,253,1) 50%,rgba(5,171,224,1) 90%,rgba(5,122,181,1) 97%,rgba(0,71,130,1) 100%);
+    background: -ms-linear-gradient(left,  rgba(0,71,130,1) 0%,rgba(5,122,181,1) 3%,rgba(5,171,224,1) 10%,rgba(135,224,253,1) 50%,rgba(5,171,224,1) 90%,rgba(5,122,181,1) 97%,rgba(0,71,130,1) 100%);
+    background: linear-gradient(to right,  rgba(0,71,130,1) 0%,rgba(5,122,181,1) 3%,rgba(5,171,224,1) 10%,rgba(135,224,253,1) 50%,rgba(5,171,224,1) 90%,rgba(5,122,181,1) 97%,rgba(0,71,130,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004782', endColorstr='#004782',GradientType=1 );
+}

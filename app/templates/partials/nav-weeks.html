@@ -1,0 +1,9 @@
+<div class="week-nav-wrapper">
+    <div class="list-group week-nav">
+        {% for navItem in navList %}
+            <a href="{{ base_url }}{{ navItem.uri }}" class="list-group-item {% if navItem.active %}active{% endif %}">
+                {{ navItem.text }}
+            </a>
+        {% endfor %}
+    </div>
+</div>
