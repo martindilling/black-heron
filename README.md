@@ -3,6 +3,8 @@ Black Heron
 
 A simple site to see when the sun is rising and setting and how long the sun is up.
 
+See it in action here [http://black-heron.martindilling.com](http://black-heron.martindilling.com)
+
 ### Installation
 
 You need [Composer](https://getcomposer.org/) to install the dependencies for this project.
