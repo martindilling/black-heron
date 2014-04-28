@@ -12,6 +12,14 @@ Sunny::setToStringFormat('d-m-Y');
 // Get an instance of View
 $view = new View();
 
+// The location information to get the result from
+// TODO: Location is fixed to this for now, should be changeable 
+$location = array(
+    'timezone'  => 'Europe/Copenhagen',
+    'latitude'  => 56.4647961,
+    'longitude' => 9.993591,
+);
+
 /******************************************************************************
  * Redirect to: Show weeks one year forwards
  * With current week
@@ -29,14 +37,14 @@ Macaw::get('/', function()
 /******************************************************************************
  * Show weeks one year forwards
  *****************************************************************************/
-Macaw::get('/week/(:num)', function($segmentWeek) use ($view)
+Macaw::get('/week/(:num)', function($segmentWeek) use ($view, $location)
 {
     // Get a list of weeks for the navigation
     $now = Sunny::now();
     $navList = NavPresenter::weekList($now->weekOfYear, $now->year, $segmentWeek, '/week/{:week}');
 
     // Get an instance of the Week
-    $week = new Week($segmentWeek, $navList[$segmentWeek]['year'], 'Europe/Copenhagen', 56.4647961, 9.993591);
+    $week = new Week($segmentWeek, $navList[$segmentWeek]['year'], $location['timezone'], $location['latitude'], $location['longitude']);
 
     // Get the week data prepared for the view
     $weekData = WeekPresenter::getArray($week);
@@ -71,13 +79,13 @@ Macaw::get('/year/week', function()
 /******************************************************************************
  * Show weeks in a year
  *****************************************************************************/
-Macaw::get('/year/(:num)/week/(:num)', function($segmentYear, $segmentWeek) use ($view)
+Macaw::get('/year/(:num)/week/(:num)', function($segmentYear, $segmentWeek) use ($view, $location)
 {
     // Get a list of weeks for the navigation
     $weekList = NavPresenter::weekList(1, $segmentYear, $segmentWeek, '/year/{:year}/week/{:week}');
 
     // Get an instance of the Week
-    $week = new Week($segmentWeek, $segmentYear, 'Europe/Copenhagen', 56.4647961, 9.993591);
+    $week = new Week($segmentWeek, $segmentYear, $location['timezone'], $location['latitude'], $location['longitude']);
 
     // Get the week data prepared for the view
     $weekData = WeekPresenter::getArray($week);
@@ -112,13 +120,13 @@ Macaw::get('/year', function()
 /******************************************************************************
  * Show all weeks in a year
  *****************************************************************************/
-Macaw::get('/year/(:num)', function($segmentYear) use ($view)
+Macaw::get('/year/(:num)', function($segmentYear) use ($view, $location)
 {
     // Get a list of years for the navigation
     $yearList = NavPresenter::yearList($segmentYear, 4, '/year/{:year}');
 
     // Get an instance of the Week
-    $week = new Week(1, $segmentYear, 'Europe/Copenhagen', 56.4647961, 9.993591);
+    $week = new Week(1, $segmentYear, $location['timezone'], $location['latitude'], $location['longitude']);
 
     // Fill an array with Week instances for the next year
     $weeks = array($week);
