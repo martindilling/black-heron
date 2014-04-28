@@ -21,7 +21,7 @@ composer install
 You need to set the return string of the base_url() to match the website root. Make sure it does not end with a trailing backslash.
 
 Example:
-```
+```php
 function base_url()
 {
     return 'http://black-heron.martindilling.com';
@@ -31,7 +31,7 @@ function base_url()
 If the page is for production, also set the isDebugging() to false.
 
 Example:
-```
+```php
 function isDebugging()
 {
     return false;
