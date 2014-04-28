@@ -35,3 +35,11 @@ function isDebugging()
     return false;
 }
 ```
+
+### Why Black Heron
+
+This application shows when it gets daytime and when it gets nighttime.
+
+[This is a Black Heron](https://www.youtube.com/v/EQ1HKCYJM5U?start=0&end=16&version=3)
+
+And that's why it's called Black Heron
