@@ -1,5 +1,6 @@
 {
-    "name": "martindilling/daytime",
+    "name": "martindilling/black-heron",
+    "description": "Get the time for sunrise, sunset and the time the sun is up",
     "license": "MIT",
     "authors": [
         {
