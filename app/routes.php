@@ -164,7 +164,7 @@ Macaw::error(function() use ($view)
     );
 
     // View the page with a 404 status code
-    http_response_code(404);
+    header("HTTP/1.0 404 Not Found");
     echo $view->render('page/404.html', $viewData);
 });
 
