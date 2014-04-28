@@ -12,6 +12,7 @@ function isDebugging()
 
 /**
  * Return the base url for creating absolute urls
+ * Without trailing backslash
  * 
  * @return string
  */
