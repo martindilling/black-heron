@@ -1,7 +1,7 @@
 <?php
 
 // Require the config
-require_once __DIR__.'/app/config.php';
+require_once __DIR__ . '/../app/config.php';
 
 // Require the composer autoloader
 require_once path('base').'/vendor/autoload.php';

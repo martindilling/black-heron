@@ -7,7 +7,7 @@
  */
 function isDebugging()
 {
-    return false;
+    return true;
 }
 
 /**
@@ -17,7 +17,7 @@ function isDebugging()
  */
 function base_url()
 {
-    return 'http://localhost/daytime';
+    return 'http://localhost/daytime/public';
 }
 
 /**
