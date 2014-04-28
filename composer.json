@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "illuminate/support": "4.2.*",
+        "illuminate/support": "4.1.*",
         "martindilling/sunny": "0.*",
         "codingbean/macaw": "dev-master",
         "twig/twig": "1.*"
