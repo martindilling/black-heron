@@ -1,6 +1,7 @@
 <?php
 
 use Daytime\NavPresenter;
+use Daytime\Route;
 use Daytime\View;
 use Daytime\Week;
 use Daytime\WeekPresenter;
@@ -24,7 +25,7 @@ $location = array(
  * Redirect to: Show weeks one year forwards
  * With current week
  *****************************************************************************/
-Macaw::get('/', function()
+Route::get('/', function()
 {
     $now = Sunny::now();
 
@@ -37,7 +38,7 @@ Macaw::get('/', function()
 /******************************************************************************
  * Show weeks one year forwards
  *****************************************************************************/
-Macaw::get('/week/(:num)', function($segmentWeek) use ($view, $location)
+Route::get('/week/(:num)', function($segmentWeek) use ($view, $location)
 {
     // Get a list of weeks for the navigation
     $now = Sunny::now();
@@ -66,7 +67,7 @@ Macaw::get('/week/(:num)', function($segmentWeek) use ($view, $location)
  * Redirect to: Show weeks in a year
  * With current year and week
  *****************************************************************************/
-Macaw::get('/year/week', function()
+Route::get('/year/week', function()
 {
     $now = Sunny::now();
 
@@ -79,7 +80,7 @@ Macaw::get('/year/week', function()
 /******************************************************************************
  * Show weeks in a year
  *****************************************************************************/
-Macaw::get('/year/(:num)/week/(:num)', function($segmentYear, $segmentWeek) use ($view, $location)
+Route::get('/year/(:num)/week/(:num)', function($segmentYear, $segmentWeek) use ($view, $location)
 {
     // Get a list of weeks for the navigation
     $weekList = NavPresenter::weekList(1, $segmentYear, $segmentWeek, '/year/{:year}/week/{:week}');
@@ -107,7 +108,7 @@ Macaw::get('/year/(:num)/week/(:num)', function($segmentYear, $segmentWeek) use 
  * Redirect to: Show all weeks in a year
  * With current year
  *****************************************************************************/
-Macaw::get('/year', function()
+Route::get('/year', function()
 {
     $now = Sunny::now();
 
@@ -120,7 +121,7 @@ Macaw::get('/year', function()
 /******************************************************************************
  * Show all weeks in a year
  *****************************************************************************/
-Macaw::get('/year/(:num)', function($segmentYear) use ($view, $location)
+Route::get('/year/(:num)', function($segmentYear) use ($view, $location)
 {
     // Get a list of years for the navigation
     $yearList = NavPresenter::yearList($segmentYear, 4, '/year/{:year}');
@@ -155,7 +156,7 @@ Macaw::get('/year/(:num)', function($segmentYear) use ($view, $location)
 /******************************************************************************
  * Not found
  *****************************************************************************/
-Macaw::error(function() use ($view)
+Route::error(function() use ($view)
 {
     // Data to be send to the view
     $viewData = array(
@@ -169,4 +170,4 @@ Macaw::error(function() use ($view)
 });
 
 // Run the right route
-Macaw::dispatch();
+Route::dispatch();
